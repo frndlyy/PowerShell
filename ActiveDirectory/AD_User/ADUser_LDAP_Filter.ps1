@@ -1,0 +1,2 @@
+﻿#Get AD users in subdivision technology whose location is blank
+Get-ADUser -LDAPFilter "(&(subdivision= Technology)(!l=*))" -Properties * | Select-Object DisplayName,mail,co | Sort-Object co | Export-Csv TechnologyTeam_No-Location.csv

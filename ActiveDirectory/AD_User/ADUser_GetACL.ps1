@@ -1,0 +1,1 @@
+(Get-ACL "AD:$((Get-ADUser james).distinguishedname)").access
